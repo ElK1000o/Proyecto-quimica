@@ -1,0 +1,16 @@
+﻿{
+  "name": "concentraciones-quimicas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Plataforma educativa para estudiar y resolver unidades de concentracion en quimica.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "node --watch src/server/server.js",
+    "start": "node src/server/server.js",
+    "test": "node tests/full-run.js",
+    "test:node": "node --test"
+  }
+}

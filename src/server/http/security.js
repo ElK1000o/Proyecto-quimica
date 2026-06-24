@@ -58,7 +58,7 @@ export function assertTrustedMutation(request, requestUrl, configuredOrigin) {
     return;
   }
 
-  const originHeader = request.headers.origin;
+  const originHeader = typeof request.headers.origin === 'string' ? request.headers.origin.trim() : request.headers.origin;
   const origin = configuredOrigin || `${requestUrl.protocol}//${requestUrl.host}`;
   if (originHeader !== origin) {
     throw new AppError(403, 'Origen no permitido para solicitudes mutables.', { code: 'origin_forbidden' });

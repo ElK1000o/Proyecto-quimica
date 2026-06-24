@@ -1,356 +1,356 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Concentraciones Químicas | Guía, calculadoras y práctica</title>
-    <meta
-      name="description"
-      content="Plataforma educativa para aprender unidades de concentración con teoría, calculadoras, convertidor y práctica guiada."
-    />
-    <link rel="stylesheet" href="/styles/tokens.css" />
-    <link rel="stylesheet" href="/styles/app.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#hero">
-          <span class="brand-mark">C</span>
-          <span>
-            <strong>Concentraciones Químicas</strong>
-            <small>Guía de estudio y resolución</small>
-          </span>
-        </a>
-        <nav class="nav-links" aria-label="Navegacion principal">
-          <a href="#calculators">Calculadoras</a>
-          <a href="#theory">Fundamentos</a>
-          <a href="#converter">Convertidor</a>
-          <a href="#practice">Práctica</a>
-          <a href="#exercises">Ejemplos</a>
-          <a href="#project-sheet">Equipo</a>
-        </nav>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
-          <span id="theme-toggle-label">Tema oscuro</span>
-        </button>
-      </header>
 
-      <main>
-        <section class="hero section" id="hero">
-          <div class="hero-copy">
-            <span class="eyebrow">Plataforma de aprendizaje</span>
-            <h1>Aprende, practica y resuelve unidades de concentración con claridad.</h1>
-            <p class="hero-lead">
-              Reúne en un solo lugar teoría, calculadoras, conversiones y ejercicios para % m/m, % m/v, % v/v, ppm,
-              molaridad, normalidad y fracción molar.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="#calculators">Abrir calculadoras</a>
-              <a class="button secondary" href="#practice">Generar práctica</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concentraciones Químicas | Guía, calculadoras y práctica</title>
+  <meta name="description"
+    content="Plataforma educativa para aprender unidades de concentración con teoría, calculadoras, convertidor y práctica guiada." />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles/app.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#hero">
+        <span class="brand-mark">C</span>
+        <span>
+          <strong>Concentraciones Químicas</strong>
+          <small>Guía de estudio y resolución</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Navegacion principal">
+        <a href="#calculators">Calculadoras</a>
+        <a href="#theory">Fundamentos</a>
+        <a href="#converter">Convertidor</a>
+        <a href="#practice">Práctica</a>
+        <a href="#exercises">Ejemplos</a>
+        <a href="#project-sheet">Equipo</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+        <span id="theme-toggle-label">Tema oscuro</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Plataforma de aprendizaje</span>
+          <h1>Aprende, practica y resuelve unidades de concentración con claridad.</h1>
+          <p class="hero-lead">
+            Reúne en un solo lugar teoría, calculadoras, conversiones y ejercicios para % m/m, % m/v, % v/v, ppm,
+            molaridad, normalidad y fracción molar.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#calculators">Abrir calculadoras</a>
+            <a class="button secondary" href="#practice">Generar práctica</a>
+          </div>
+          <ul class="hero-points">
+            <li>Identifica rápidamente qué fórmula corresponde a cada tipo de ejercicio.</li>
+            <li>Resuelve datos faltantes con desarrollo paso a paso y lectura del resultado.</li>
+            <li>Refuerza el método con ejemplos, práctica por dificultad y errores comunes.</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel">
+          <article class="dashboard-card">
+            <div class="dashboard-head">
+              <span class="status-dot"></span>
+              <strong>Panel de resolución</strong>
             </div>
-            <ul class="hero-points">
-              <li>Identifica rápidamente qué fórmula corresponde a cada tipo de ejercicio.</li>
-              <li>Resuelve datos faltantes con desarrollo paso a paso y lectura del resultado.</li>
-              <li>Refuerza el método con ejemplos, práctica por dificultad y errores comunes.</li>
+            <div class="formula-showcase">
+              <div>
+                <span class="mini-label">% m/m</span>
+                <p>% m/m = (m<sub>soluto</sub> / m<sub>solucion</sub>) * 100</p>
+              </div>
+              <div>
+                <span class="mini-label">% m/v</span>
+                <p>% m/v = (m<sub>soluto</sub> / V<sub>solucion</sub>) * 100</p>
+              </div>
+              <div>
+                <span class="mini-label">% v/v</span>
+                <p>% v/v = (V<sub>soluto</sub> / V<sub>solucion</sub>) * 100</p>
+              </div>
+              <div>
+                <span class="mini-label">ppm</span>
+                <p>ppm ~= m<sub>soluto</sub> / V<sub>solucion</sub></p>
+              </div>
+              <div>
+                <span class="mini-label">Molaridad</span>
+                <p>M = n / V</p>
+              </div>
+              <div>
+                <span class="mini-label">Normalidad</span>
+                <p>N = eq / V</p>
+              </div>
+              <div>
+                <span class="mini-label">Fracción molar</span>
+                <p>X<sub>i</sub> = n<sub>i</sub> / n<sub>total</sub></p>
+              </div>
+            </div>
+            <div class="metric-grid">
+              <article>
+                <strong>7</strong>
+                <span>unidades disponibles</span>
+              </article>
+              <article>
+                <strong>14</strong>
+                <span>ejercicios resueltos</span>
+              </article>
+              <article>
+                <strong>Convertidor</strong>
+                <span>magnitudes y concentraciones</span>
+              </article>
+              <article>
+                <strong>2 modos</strong>
+                <span>estudio y examen</span>
+              </article>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section architecture-strip" id="study-guide">
+        <article class="info-card">
+          <span class="eyebrow">Qué encontrarás</span>
+          <h2>Conceptos, fórmulas y práctica en un mismo espacio</h2>
+          <p>
+            Cada unidad muestra cuándo usarla, cuándo evitarla, pistas para reconocerla y una calculadora para
+            despejar la variable faltante.
+          </p>
+        </article>
+        <article class="info-card">
+          <span class="eyebrow">Cómo estudiar</span>
+          <h2>Empieza por la teoría y luego comprueba el procedimiento</h2>
+          <p>
+            Pasa por cuatro etapas: identifica la unidad adecuada, revisa la fórmula, convierte magnitudes si hace
+            falta y por último compara tu resultado con una resolución guiada.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="calculators">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Calculadoras</span>
+            <h2>Resuelve variables faltantes con apoyo guiado</h2>
+          </div>
+          <p>Deja exactamente un campo vacio. El sistema calcula, explica el procedimiento y verifica consistencia.</p>
+        </div>
+        <div class="calculator-grid" id="calculator-grid"></div>
+      </section>
+
+      <section class="section" id="theory">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Fundamentos teóricos</span>
+            <h2>Panorama completo de las siete unidades de concentración</h2>
+          </div>
+          <p>Cada tarjeta resume definición, uso, diferencias, pistas de reconocimiento y errores frecuentes.</p>
+        </div>
+        <div class="theory-grid" id="theory-grid"></div>
+      </section>
+
+      <section class="section" id="converter">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Convertidor</span>
+            <h2>Convierte masa, volumen, moles y concentraciones diluidas</h2>
+          </div>
+          <p>Usa este módulo antes de calcular si el ejercicio mezcla unidades que no son compatibles entre sí.</p>
+        </div>
+        <div class="panel-grid">
+          <article class="control-card">
+            <form id="converter-form" class="control-form">
+              <div class="field">
+                <label for="converter-category">Categoria</label>
+                <div class="input-shell">
+                  <select id="converter-category" name="category"></select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="converter-value">Valor</label>
+                <div class="input-shell">
+                  <input id="converter-value" name="value" inputmode="decimal" placeholder="1000" autocomplete="off" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="converter-from">Desde</label>
+                <div class="input-shell">
+                  <select id="converter-from" name="fromUnit"></select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="converter-to">Hacia</label>
+                <div class="input-shell">
+                  <select id="converter-to" name="toUnit"></select>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="mini-button primary" type="submit">Convertir</button>
+              </div>
+            </form>
+          </article>
+          <article class="control-card" id="converter-result">
+            <div class="empty-state">Selecciona una categoria, ingresa un valor y ejecuta la conversion.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="practice">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Práctica guiada</span>
+            <h2>Genera ejercicios por unidad y dificultad</h2>
+          </div>
+          <p>En modo estudio se muestra la resolución completa. En modo examen puedes intentar primero y revelar
+            después.</p>
+        </div>
+        <div class="panel-grid">
+          <article class="control-card">
+            <div class="toggle-group" id="practice-mode-toggle">
+              <button class="filter-button active" type="button" data-mode="study">Modo estudio</button>
+              <button class="filter-button" type="button" data-mode="exam">Modo examen</button>
+            </div>
+            <form id="practice-form" class="control-form">
+              <div class="field">
+                <label for="practice-unit">Unidad</label>
+                <div class="input-shell">
+                  <select id="practice-unit" name="unit"></select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="practice-difficulty">Dificultad</label>
+                <div class="input-shell">
+                  <select id="practice-difficulty" name="difficulty">
+                    <option value="basico">Basico</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="mini-button primary" type="submit">Generar ejercicio</button>
+              </div>
+            </form>
+          </article>
+          <article class="control-card" id="generated-exercise">
+            <div class="empty-state">Aquí aparecerá un ejercicio nuevo para practicar.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="exercises">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Ejercicios resueltos</span>
+            <h2>Procedimientos paso a paso listos para estudio y autoevaluación</h2>
+          </div>
+          <p>Selecciona una unidad y repasa ejemplos completos para reforzar el método y evitar errores frecuentes.</p>
+        </div>
+        <div class="exercise-toolbar" id="exercise-filters"></div>
+        <div class="exercise-grid" id="exercise-grid"></div>
+      </section>
+
+      <section class="section" id="errors">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Errores comunes</span>
+            <h2>Fallas típicas que conviene detectar antes de entregar un ejercicio</h2>
+          </div>
+          <p>Revisar estas alertas antes de calcular evita muchos resultados incoherentes o mal interpretados.</p>
+        </div>
+        <div class="exercise-grid" id="error-grid"></div>
+      </section>
+
+      <section class="section" id="study-tips">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Guía de resolución</span>
+            <h2>Tres ideas clave para abordar mejor cada ejercicio</h2>
+          </div>
+          <p>Una buena resolución no depende solo de la fórmula, sino de identificar magnitudes, unidades y significado
+            físico.</p>
+        </div>
+        <div class="security-grid">
+          <article class="security-card">
+            <h3>Antes de calcular</h3>
+            <ul>
+              <li>Identifica si el problema trabaja con masa, volumen o cantidad de sustancia.</li>
+              <li>Comprueba si la unidad pedida es porcentaje, molaridad o fracción molar.</li>
+              <li>Verifica que todos los datos estén en unidades compatibles antes de sustituir.</li>
             </ul>
-          </div>
-
-          <div class="hero-panel">
-            <article class="dashboard-card">
-              <div class="dashboard-head">
-                <span class="status-dot"></span>
-                <strong>Panel de resolución</strong>
-              </div>
-              <div class="formula-showcase">
-                <div>
-                  <span class="mini-label">% m/m</span>
-                  <p>% m/m = (m<sub>soluto</sub> / m<sub>solucion</sub>) * 100</p>
-                </div>
-                <div>
-                  <span class="mini-label">Molaridad</span>
-                  <p>M = n / V</p>
-                </div>
-                <div>
-                  <span class="mini-label">Fracción molar</span>
-                  <p>X<sub>i</sub> = n<sub>i</sub> / n<sub>total</sub></p>
-                </div>
-              </div>
-              <div class="metric-grid">
-                <article>
-                  <strong>7</strong>
-                  <span>unidades disponibles</span>
-                </article>
-                <article>
-                  <strong>14</strong>
-                  <span>ejercicios resueltos</span>
-                </article>
-                <article>
-                  <strong>Convertidor</strong>
-                  <span>magnitudes y concentraciones</span>
-                </article>
-                <article>
-                  <strong>2 modos</strong>
-                  <span>estudio y examen</span>
-                </article>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section architecture-strip" id="study-guide">
-          <article class="info-card">
-            <span class="eyebrow">Qué encontrarás</span>
-            <h2>Conceptos, fórmulas y práctica en un mismo espacio</h2>
-            <p>
-              Cada unidad muestra cuándo usarla, cuándo evitarla, pistas para reconocerla y una calculadora para
-              despejar la variable faltante.
-            </p>
           </article>
-          <article class="info-card">
-            <span class="eyebrow">Cómo estudiar</span>
-            <h2>Empieza por la teoría y luego comprueba el procedimiento</h2>
-            <p>
-              Pasa por cuatro etapas: identifica la unidad adecuada, revisa la fórmula, convierte magnitudes si hace
-              falta y por último compara tu resultado con una resolución guiada.
-            </p>
+          <article class="security-card">
+            <h3>Durante el procedimiento</h3>
+            <ul>
+              <li>Escribe la fórmula general antes de reemplazar números.</li>
+              <li>Cuida las conversiones entre mL y L, y entre masa y moles.</li>
+              <li>Observa si el denominador representa solución total o solo solvente.</li>
+            </ul>
           </article>
-        </section>
+          <article class="security-card">
+            <h3>Al interpretar el resultado</h3>
+            <ul>
+              <li>Expresa siempre el resultado con su unidad correspondiente.</li>
+              <li>Revisa si el valor obtenido tiene sentido físico dentro del contexto del problema.</li>
+              <li>Relaciona el numero final con una idea concreta, por ejemplo cantidad por 100 g o por litro.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        <section class="section" id="calculators">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Calculadoras</span>
-              <h2>Resuelve variables faltantes con apoyo guiado</h2>
-            </div>
-            <p>Deja exactamente un campo vacio. El sistema calcula, explica el procedimiento y verifica consistencia.</p>
+      <section class="section" id="project-sheet">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Ficha del proyecto</span>
+            <h2>Equipo, asignatura y contexto del proyecto</h2>
           </div>
-          <div class="calculator-grid" id="calculator-grid"></div>
-        </section>
-
-        <section class="section" id="theory">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Fundamentos teóricos</span>
-              <h2>Panorama completo de las siete unidades de concentración</h2>
-            </div>
-            <p>Cada tarjeta resume definición, uso, diferencias, pistas de reconocimiento y errores frecuentes.</p>
-          </div>
-          <div class="theory-grid" id="theory-grid"></div>
-        </section>
-
-        <section class="section" id="converter">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Convertidor</span>
-              <h2>Convierte masa, volumen, moles y concentraciones diluidas</h2>
-            </div>
-            <p>Usa este módulo antes de calcular si el ejercicio mezcla unidades que no son compatibles entre sí.</p>
-          </div>
-          <div class="panel-grid">
-            <article class="control-card">
-              <form id="converter-form" class="control-form">
-                <div class="field">
-                  <label for="converter-category">Categoria</label>
-                  <div class="input-shell">
-                    <select id="converter-category" name="category"></select>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="converter-value">Valor</label>
-                  <div class="input-shell">
-                    <input id="converter-value" name="value" inputmode="decimal" placeholder="1000" autocomplete="off" />
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="converter-from">Desde</label>
-                  <div class="input-shell">
-                    <select id="converter-from" name="fromUnit"></select>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="converter-to">Hacia</label>
-                  <div class="input-shell">
-                    <select id="converter-to" name="toUnit"></select>
-                  </div>
-                </div>
-                <div class="form-actions">
-                  <button class="mini-button primary" type="submit">Convertir</button>
-                </div>
-              </form>
-            </article>
-            <article class="control-card" id="converter-result">
-              <div class="empty-state">Selecciona una categoria, ingresa un valor y ejecuta la conversion.</div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="practice">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Práctica guiada</span>
-              <h2>Genera ejercicios por unidad y dificultad</h2>
-            </div>
-            <p>En modo estudio se muestra la resolución completa. En modo examen puedes intentar primero y revelar después.</p>
-          </div>
-          <div class="panel-grid">
-            <article class="control-card">
-              <div class="toggle-group" id="practice-mode-toggle">
-                <button class="filter-button active" type="button" data-mode="study">Modo estudio</button>
-                <button class="filter-button" type="button" data-mode="exam">Modo examen</button>
+          <p>Información del trabajo desarrollado para Química Aplicada a la Ingeniería.</p>
+        </div>
+        <div class="identity-grid">
+          <article class="identity-card identity-card-wide">
+            <span class="card-pill">Universidad</span>
+            <div class="logo-showcase" aria-label="Identidad visual de la Universidad Mayor">
+              <div class="logo-frame logo-frame-horizontal">
+                <img class="institution-logo horizontal-logo theme-only-light" src="/assets/logos/LOGO-UM-COLOR-H.png"
+                  alt="Logo horizontal de la Universidad Mayor" />
+                <img class="institution-logo horizontal-logo theme-only-dark" src="/assets/logos/LOGO-UM-BANCO-H.png"
+                  alt="Logo horizontal de la Universidad Mayor" />
               </div>
-              <form id="practice-form" class="control-form">
-                <div class="field">
-                  <label for="practice-unit">Unidad</label>
-                  <div class="input-shell">
-                    <select id="practice-unit" name="unit"></select>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="practice-difficulty">Dificultad</label>
-                  <div class="input-shell">
-                    <select id="practice-difficulty" name="difficulty">
-                      <option value="basico">Basico</option>
-                      <option value="intermedio">Intermedio</option>
-                      <option value="avanzado">Avanzado</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-actions">
-                  <button class="mini-button primary" type="submit">Generar ejercicio</button>
-                </div>
-              </form>
-            </article>
-            <article class="control-card" id="generated-exercise">
-              <div class="empty-state">Aquí aparecerá un ejercicio nuevo para practicar.</div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="exercises">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Ejercicios resueltos</span>
-              <h2>Procedimientos paso a paso listos para estudio y autoevaluación</h2>
-            </div>
-            <p>Selecciona una unidad y repasa ejemplos completos para reforzar el método y evitar errores frecuentes.</p>
-          </div>
-          <div class="exercise-toolbar" id="exercise-filters"></div>
-          <div class="exercise-grid" id="exercise-grid"></div>
-        </section>
-
-        <section class="section" id="errors">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Errores comunes</span>
-              <h2>Fallas típicas que conviene detectar antes de entregar un ejercicio</h2>
-            </div>
-            <p>Revisar estas alertas antes de calcular evita muchos resultados incoherentes o mal interpretados.</p>
-          </div>
-          <div class="exercise-grid" id="error-grid"></div>
-        </section>
-
-        <section class="section" id="study-tips">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Guía de resolución</span>
-              <h2>Tres ideas clave para abordar mejor cada ejercicio</h2>
-            </div>
-            <p>Una buena resolución no depende solo de la fórmula, sino de identificar magnitudes, unidades y significado físico.</p>
-          </div>
-          <div class="security-grid">
-            <article class="security-card">
-              <h3>Antes de calcular</h3>
-              <ul>
-                <li>Identifica si el problema trabaja con masa, volumen o cantidad de sustancia.</li>
-                <li>Comprueba si la unidad pedida es porcentaje, molaridad o fracción molar.</li>
-                <li>Verifica que todos los datos estén en unidades compatibles antes de sustituir.</li>
-              </ul>
-            </article>
-            <article class="security-card">
-              <h3>Durante el procedimiento</h3>
-              <ul>
-                <li>Escribe la fórmula general antes de reemplazar números.</li>
-                <li>Cuida las conversiones entre mL y L, y entre masa y moles.</li>
-                <li>Observa si el denominador representa solución total o solo solvente.</li>
-              </ul>
-            </article>
-            <article class="security-card">
-              <h3>Al interpretar el resultado</h3>
-              <ul>
-                <li>Expresa siempre el resultado con su unidad correspondiente.</li>
-                <li>Revisa si el valor obtenido tiene sentido físico dentro del contexto del problema.</li>
-                <li>Relaciona el numero final con una idea concreta, por ejemplo cantidad por 100 g o por litro.</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="project-sheet">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Ficha del proyecto</span>
-              <h2>Equipo, asignatura y contexto académico</h2>
-            </div>
-            <p>Información institucional del trabajo desarrollado para Química Aplicada a la Ingeniería.</p>
-          </div>
-          <div class="identity-grid">
-            <article class="identity-card identity-card-wide">
-              <span class="card-pill">Universidad</span>
-              <h3>Universidad Mayor</h3>
-              <div class="logo-showcase" aria-label="Identidad visual de la Universidad Mayor">
-                <div class="logo-frame logo-frame-horizontal">
-                  <img
-                    class="institution-logo horizontal-logo theme-only-light"
-                    src="/assets/logos/LOGO-UM-COLOR-H.png"
-                    alt="Logo horizontal de la Universidad Mayor"
-                  />
-                  <img
-                    class="institution-logo horizontal-logo theme-only-dark"
-                    src="/assets/logos/LOGO-UM-BANCO-H.png"
-                    alt="Logo horizontal de la Universidad Mayor"
-                  />
-                </div>
-                <div class="logo-frame logo-frame-vertical">
-                  <img
-                    class="institution-logo vertical-logo theme-only-light"
-                    src="/assets/logos/LOGO-UM-COLOR-V.png"
-                    alt="Emblema vertical de la Universidad Mayor"
-                  />
-                  <img
-                    class="institution-logo vertical-logo theme-only-dark"
-                    src="/assets/logos/LOGO-UM-BANCO-V.png"
-                    alt="Emblema vertical de la Universidad Mayor"
-                  />
-                </div>
+              <div class="member-panel">
+                <span class="card-pill">Integrantes</span>
+                <ul class="member-list">
+                  <li>Cristiann Calderon</li>
+                  <li>Matias Catalans</li>
+                  <li>Vicente Farías</li>
+                  <li>Lukas González</li>
+                  <li>Camilo Riquelme</li>
+                  <li>Ivan Rubilar</li>
+                </ul>
               </div>
-              <p>Química Aplicada a la Ingeniería - NQBT1003</p>
-            </article>
-            <article class="identity-card">
-              <span class="card-pill">Profesora</span>
-              <h3>Marcela Vivanco Millares</h3>
-              <p>Docente a cargo de la asignatura.</p>
-            </article>
-            <article class="identity-card identity-card-full">
-              <span class="card-pill">Integrantes</span>
-              <h3>Equipo de trabajo</h3>
-              <ul class="member-list">
-                <li>Cristiann Calderon</li>
-                <li>Matias Catalans</li>
-                <li>Vicente Farías</li>
-                <li>Lukas González</li>
-                <li>Camilo Riquelme</li>
-                <li>Ivan Rubilar</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-      </main>
+            </div>
+            <p>Química Aplicada a la Ingeniería - NQBT1003</p>
+          </article>
+          <article class="identity-card">
+            <span class="card-pill">Profesora</span>
+            <h3>Marcela Vivanco Millares</h3>
+            <p>Docente a cargo de la asignatura.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer">
-        <p>Apoyo de estudio para unidades de concentración en química.</p>
-        <small>&copy; <span id="year"></span> Concentraciones Químicas.</small>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p>Apoyo de estudio para unidades de concentración en química.</p>
+      <a class="footer-link" href="https://github.com/ElK1000o/Proyecto-quimica" target="_blank" rel="noopener">Ver el proyecto en GitHub</a>
+      <small>&copy; <span id="year"></span> Concentraciones Químicas.</small>
+    </footer>
+  </div>
 
-    <script type="module" src="/scripts/main.js"></script>
-  </body>
+  <script type="module" src="/scripts/main.js"></script>
+</body>
+
 </html>

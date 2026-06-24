@@ -36,9 +36,9 @@ El MVP se construyo como una plataforma educativa full-stack con una arquitectur
 
 La expansion a nuevas unidades sigue un patron fijo:
 
-1. Agregar un schema de validacion.
-2. Crear un solver puro en `src/server/domain/concentration`.
-3. Registrar la unidad en `calculatorCatalog`.
+1. Agregar un schema de validacion en `validators/calculationSchemas`.
+2. Crear un solver puro en `src/server/domain/concentration` y registrarlo en `calculationEngine`.
+3. Registrar la unidad en `content/calculators.js` (catalogo que consume `studyApi`).
 4. Incorporar teoria y ejercicios al banco.
 
 ## Estructura profesional de carpetas
@@ -72,22 +72,21 @@ docs/
 ### MVP actual
 
 - Landing premium
-- 3 calculadoras
-- Ejercicios resueltos
+- 7 calculadoras: % m/m, % m/v, % v/v, ppm, molaridad, normalidad y fraccion molar
+- Banco de ejercicios resueltos y generador de ejercicios aleatorios por dificultad (basico/intermedio)
+- Conversor de unidades
+- Modo estudio / modo examen
 - Seguridad base
 - Tests unitarios e integracion
 
 ### Version intermedia
 
-- Normalidad, ppm, % m/v y % v/v
-- Conversor de unidades
-- Modo estudio / modo examen
-- Historial local o persistente
+- Historial local o persistente del progreso del usuario
 
 ### Version avanzada
 
 - Autenticacion
 - Banco editable de ejercicios
-- Generador adaptativo
+- Generador realmente adaptativo, ajustado al desempeno historico del usuario (el generador actual crea ejercicios aleatorios por dificultad, todavia no adapta segun resultados previos)
 - Analitica de progreso
 - Panel docente/admin

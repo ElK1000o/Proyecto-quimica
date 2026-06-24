@@ -1,7 +1,7 @@
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { calculate } from '../../src/server/services/calculationService.js';
+import { calculate } from '../../src/server/services/calculationEngine.js';
 
 test('calcula porcentaje masa/masa cuando falta la concentracion', () => {
   const result = calculate('mass-mass', {

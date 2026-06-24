@@ -265,6 +265,7 @@ button {
 
 .formula-showcase {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
   margin-bottom: 1.3rem;
 }
@@ -654,16 +655,20 @@ button {
   grid-column: span 2;
 }
 
-.identity-card-full {
-  grid-column: 1 / -1;
+.logo-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 1rem 0 1.1rem;
 }
 
-.logo-showcase {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) auto;
-  gap: 1rem;
-  align-items: center;
-  margin: 1rem 0 1.1rem;
+.member-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  width: 13rem;
 }
 
 .logo-frame {
@@ -678,10 +683,8 @@ button {
 
 .logo-frame-horizontal {
   min-height: 8rem;
-}
-
-.logo-frame-vertical {
-  min-width: 9rem;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .institution-logo {
@@ -692,10 +695,6 @@ button {
 
 .horizontal-logo {
   max-width: 28rem;
-}
-
-.vertical-logo {
-  max-width: 8.5rem;
 }
 
 .theme-only-dark {
@@ -711,11 +710,9 @@ button {
 }
 
 .member-list {
-  margin: 1rem 0 0;
+  margin: 0;
   padding-left: 1.15rem;
   color: var(--text-muted);
-  columns: 2;
-  column-gap: 2rem;
 }
 
 .member-list li + li {
@@ -735,6 +732,17 @@ button {
 .footer p,
 .footer small {
   margin: 0;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border-soft);
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--brand);
 }
 
 .is-hidden {
@@ -788,7 +796,8 @@ button {
   .architecture-strip,
   .security-grid,
   .panel-grid,
-  .identity-grid {
+  .identity-grid,
+  .formula-showcase {
     grid-template-columns: 1fr;
   }
 
@@ -809,19 +818,12 @@ button {
     grid-column: auto;
   }
 
-  .identity-card-full {
-    grid-column: auto;
-  }
-
   .logo-showcase {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .logo-frame-vertical {
-    min-width: auto;
-  }
-
-  .member-list {
-    columns: 1;
+  .member-panel {
+    width: 100%;
   }
 }

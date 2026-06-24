@@ -13,7 +13,7 @@ import {
   validateMolarityInput,
   validateNormalityInput,
   validateMoleFractionInput,
-} from '../validators/calculationSchemasV2.js';
+} from '../validators/calculationSchemas.js';
 import { AppError } from '../utils/errors.js';
 
 const calculatorMap = {

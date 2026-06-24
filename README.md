@@ -1,54 +1,57 @@
-﻿# Chemica Concentraciones
+# Concentraciones Químicas
 
-MVP full-stack para aprender y resolver unidades de concentracion con calculadoras seguras, explicacion guiada y base lista para escalar a un producto educativo completo.
+Plataforma web para aprender y resolver ejercicios de **unidades de concentración en química**. Permite calcular, entender la teoría y practicar con ejercicios paso a paso, sin necesidad de instalar nada más que un navegador.
 
-## Arquitectura general
+🔗 Repositorio: https://github.com/ElK1000o/Proyecto-quimica
 
-- Frontend SPA moderna servida por el mismo servidor para reducir complejidad operativa inicial.
-- API JSON interna con rutas versionables, validacion estricta y protecciones OWASP basicas desde el arranque.
-- Dominio matematico desacoplado de HTTP para que cada calculadora escale como modulo independiente.
-- Contenido teorico y banco de ejercicios encapsulados como catalogos reutilizables.
+## ¿De qué trata este proyecto?
 
-## Estructura del proyecto
+Este proyecto fue desarrollado para el trabajo aplicado del **Tema 5: Unidades de concentración**, de la asignatura **Química Aplicada a la Ingeniería (NQBT1003)**, dictada por la profesora **Marcela Vivanco Millares** en la **Universidad Mayor**.
 
-- `src/client`: interfaz, estilos y scripts del frontend.
-- `src/server`: servidor HTTP, seguridad, validaciones, dominio y servicios.
-- `tests`: pruebas unitarias e integracion basadas en el runner nativo de Node.
-- `docs`: arquitectura, seguridad y roadmap.
+La idea nace de una dificultad habitual en el curso: muchas veces el estudiante reconoce una fórmula, pero no siempre identifica con claridad qué tipo de concentración corresponde a cada problema, cómo interpretar los datos entregados o cómo desarrollar el ejercicio paso a paso. Por eso, en vez de entregar solo un documento con fórmulas, el equipo construyó una herramienta interactiva donde se puede practicar, calcular y revisar el procedimiento completo de cada ejercicio.
 
-## MVP implementado
+## ¿Qué hace la plataforma?
 
-- Landing moderna con narrativa de producto.
-- Calculadoras operativas para `% m/m`, `Molaridad` y `Fraccion molar`.
-- Resolucion paso a paso con resumen, chequeos y exportacion a TXT.
-- Modulo de ejercicios resueltos paso a paso.
-- Seguridad base: CSP, CSRF, rate limiting, validacion de payloads, bloqueo de path traversal y errores controlados.
+- **7 calculadoras**, una por cada unidad pedida en el Tema 5: porcentaje masa/masa (% m/m), porcentaje masa/volumen (% m/v), porcentaje volumen/volumen (% v/v), partes por millón (ppm), molaridad, normalidad y fracción molar.
+- **Resolución guiada paso a paso**: el usuario deja un solo dato vacío y la plataforma calcula esa variable, mostrando el desarrollo completo (fórmula, sustitución, resultado e interpretación), igual a como se resolvería en clases o en una prueba.
+- **Teoría de cada unidad**: qué es, cuándo usarla, cuándo no, en qué se diferencia de las demás y cuáles son los errores más comunes al aplicarla.
+- **Banco de 14 ejercicios resueltos**, dos por cada unidad, con el procedimiento completo explicado.
+- **Generador de ejercicios de práctica**, con distintos niveles de dificultad y dos modos de uso: *modo estudio* (muestra la resolución completa) y *modo examen* (primero se intenta resolver y luego se revela la solución).
+- **Convertidor de unidades** (masa, volumen, cantidad de sustancia y concentraciones diluidas), útil para preparar los datos antes de calcular.
+- Interfaz con tema claro/oscuro y diseño pensado para leerse cómodamente desde el computador o el celular.
 
-## Arranque local
+## Cómo ver la plataforma funcionando
+
+El proyecto corre con [Node.js](https://nodejs.org/) (versión 22 o superior) y no necesita instalar librerías externas ni bases de datos.
 
 ```bash
 node src/server/server.js
 ```
 
-Abrir `http://127.0.0.1:3000`.
+Luego se abre en el navegador: `http://127.0.0.1:3000`
 
-## Ejecutar tests
+Para correr las pruebas automáticas que validan que todas las calculadoras entreguen el resultado correcto:
 
 ```bash
-node tests/run-tests.js
+npm test
 ```
 
-## Nota sobre tests
+## Estructura del proyecto
 
-- 
-ode tests/run-tests.js ejecuta la validacion compatible con entornos restringidos.
-- 
-ode --test se mantiene disponible en 	ests/api y 	ests/domain para entornos sin restricciones de sandbox.
+- `src/client`: lo que ve el usuario en el navegador (la página, los estilos y la interacción de cada calculadora).
+- `src/server`: la lógica detrás de cada cálculo, la validación de los datos ingresados y la seguridad del sitio.
+- `tests`: pruebas que verifican que cada calculadora entregue el resultado matemático correcto.
+- `docs`: documentación adicional del proyecto, incluyendo la propuesta de trabajo original, la arquitectura técnica (`architecture.md`) y las medidas de seguridad aplicadas (`security.md`).
 
-## Roadmap de la siguiente fase
+## Equipo de trabajo
 
-- Agregar `% m/v`, `% v/v`, `ppm` y `normalidad` usando el mismo contrato.
-- Incorporar generador adaptativo de ejercicios por dificultad.
-- Introducir persistencia con PostgreSQL para historial, progreso y panel docente.
-- Migrar a una capa de autenticacion segura con cookies HttpOnly y sesiones endurecidas.
+Trabajo desarrollado para la asignatura **Química Aplicada a la Ingeniería (NQBT1003)** — Universidad Mayor.
 
+- Cristiann Calderon
+- Matias Catalans
+- Vicente Farías
+- Lukas González
+- Camilo Riquelme
+- Ivan Rubilar
+
+**Profesora a cargo:** Marcela Vivanco Millares

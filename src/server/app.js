@@ -17,6 +17,15 @@ const rateLimiter = new RateLimiter({
   maxRequests: config.rateLimitMaxRequests,
 });
 
+function resolveProtocol(request) {
+  const forwardedProto = request.headers['x-forwarded-proto'];
+  if (typeof forwardedProto === 'string' && forwardedProto.trim().length > 0) {
+    return forwardedProto.split(',')[0].trim();
+  }
+
+  return request.socket?.encrypted ? 'https' : 'http';
+}
+
 async function resolveStaticFile(pathname) {
   const requestedPath = pathname === '/' ? '/index.html' : pathname;
   const normalizedPath = path.normalize(decodeURIComponent(requestedPath));
@@ -42,7 +51,8 @@ async function resolveStaticFile(pathname) {
 export function createApp() {
   return async function requestHandler(request, response) {
     const requestId = randomUUID();
-    const requestUrl = new URL(request.url ?? '/', `http://${request.headers.host ?? `${config.host}:${config.port}`}`);
+    const protocol = resolveProtocol(request);
+    const requestUrl = new URL(request.url ?? '/', `${protocol}://${request.headers.host ?? `${config.host}:${config.port}`}`);
     const production = isProduction();
     response.setHeader('X-Request-Id', requestId);
     applySecurityHeaders(response, production);
